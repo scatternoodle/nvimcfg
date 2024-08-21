@@ -879,6 +879,7 @@ require("lazy").setup({
 				"query",
 				"vim",
 				"vimdoc",
+				"toml",
 			},
 			-- Autoinstall languages that are not installed
 			auto_install = true,
@@ -922,12 +923,15 @@ require("lazy").setup({
 	require("kickstart.plugins.neo-tree"),
 	require("kickstart.plugins.gitsigns"), -- adds gitsigns recommend keymaps
 
+	-- my external plugins
+	require("ext.plugins.lualine"),
+
 	-- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
 	--    This is the easiest way to modularize your config.
 	--
 	--  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
 	--    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
-	-- { import = 'custom.plugins' },
+	-- { import = "custom.plugins" },
 }, {
 	ui = {
 		-- If you are using a Nerd Font: set icons to an empty table which will use the
@@ -951,7 +955,7 @@ require("lazy").setup({
 })
 
 -- setcolorscheme actual (after all colorscheme plugins have been loaded)
-vim.cmd.colorscheme("nordbones")
+vim.cmd.colorscheme("duckbones")
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
