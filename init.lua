@@ -77,6 +77,9 @@ vim.o.autoread = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 
+-- Display ruler
+vim.opt.colorcolumn = "80,120"
+
 -- Enable mouse mode, can be useful for resizing splits for example!
 -- "" means mouse disabled.
 vim.opt.mouse = ""
@@ -857,7 +860,7 @@ require("lazy").setup({
 })
 
 -- setcolorscheme actual (after all colorscheme plugins have been loaded)
-vim.cmd.colorscheme("lackluster-hack")
+vim.cmd.colorscheme("oxocarbon")
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
