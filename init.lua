@@ -860,7 +860,7 @@ require("lazy").setup({
 })
 
 -- setcolorscheme actual (after all colorscheme plugins have been loaded)
-vim.cmd.colorscheme("oxocarbon")
+vim.cmd.colorscheme("kanagawa-wave")
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
