@@ -31,11 +31,11 @@ return {
 		"slugbyte/lackluster.nvim",
 		priority = 1000,
 		init = function()
-			require("lualine").setup({
-				options = {
-					theme = "lackluster",
-				},
-			})
+			-- require("lualine").setup({
+			-- options = {
+			-- theme = "lackluster",
+			-- },
+			-- })
 		end,
 	},
 
