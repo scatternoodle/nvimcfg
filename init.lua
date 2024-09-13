@@ -832,6 +832,7 @@ require("lazy").setup({
 	-- my external plugins
 	require("ext.plugins.colorschemes"),
 	require("ext.plugins.lualine"),
+	require("ext.plugins.trouble"),
 
 	-- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
 	--    This is the easiest way to modularize your config.
@@ -862,7 +863,7 @@ require("lazy").setup({
 })
 
 -- setcolorscheme actual (after all colorscheme plugins have been loaded)
-vim.cmd.colorscheme("tokyonight-storm")
+vim.cmd.colorscheme("vimbones")
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
