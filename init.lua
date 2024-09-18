@@ -786,6 +786,7 @@ require("lazy").setup({
 				"vim",
 				"vimdoc",
 				"toml",
+				"json",
 			},
 			-- Autoinstall languages that are not installed
 			auto_install = true,
@@ -862,8 +863,11 @@ require("lazy").setup({
 	},
 })
 
+-- bring my snippets in
+require("luasnip.loaders.from_vscode").lazy_load({ paths = "~/.config/nvim/my-snippets" })
+
 -- setcolorscheme actual (after all colorscheme plugins have been loaded)
-vim.cmd.colorscheme("vimbones")
+vim.cmd.colorscheme("rosebones")
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
