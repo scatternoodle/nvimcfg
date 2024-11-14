@@ -795,6 +795,7 @@ require("lazy").setup({
 				"vimdoc",
 				"toml",
 				"json",
+				"http",
 			},
 			-- Autoinstall languages that are not installed
 			auto_install = true,
