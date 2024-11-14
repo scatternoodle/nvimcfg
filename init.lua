@@ -521,7 +521,7 @@ require("lazy").setup({
 				--    https://github.com/pmizio/typescript-tools.nvim
 				--
 				-- But for many setups, the LSP (`tsserver`) will work just fine
-				tsserver = {},
+				ts_ls = {},
 				--
 
 				lua_ls = {
@@ -875,7 +875,14 @@ require("lazy").setup({
 require("luasnip.loaders.from_vscode").lazy_load({ paths = "~/.config/nvim/my-snippets" })
 
 -- setcolorscheme actual (after all colorscheme plugins have been loaded)
-vim.cmd.colorscheme("tokyonight")
+vim.cmd.colorscheme("lackluster-hack")
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+
+-- Start listening for godohost if we're in a godot project directory
+local gdproject = io.open(vim.fn.getcwd() .. "/project.godot", "r")
+if gdproject then
+	io.close(gdproject)
+	vim.fn.serverstart("./godothost")
+end
