@@ -206,7 +206,6 @@ vim.opt.rtp:prepend(lazypath)
 -- NOTE: Here is where you install your plugins.
 require("lazy").setup({
 	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
-
 	-- NOTE: Plugins can also be added by using a table,
 	-- with the first argument being the link and the following
 	-- keys can be used to configure plugin behavior/loading/etc.
@@ -272,7 +271,6 @@ require("lazy").setup({
 	-- you do for a plugin at the top level, you can do for a dependency.
 	--
 	-- Use the `dependencies` key to specify the dependencies of a particular plugin
-
 	{ -- Fuzzy Finder (files, lsp, etc)
 		"nvim-telescope/telescope.nvim",
 		event = "VimEnter",
@@ -843,6 +841,7 @@ require("lazy").setup({
 	require("ext.plugins.colorschemes"),
 	require("ext.plugins.lualine"),
 	require("ext.plugins.trouble"),
+	require("ext.plugins.rest-nvim"),
 
 	-- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
 	--    This is the easiest way to modularize your config.
@@ -876,7 +875,7 @@ require("lazy").setup({
 require("luasnip.loaders.from_vscode").lazy_load({ paths = "~/.config/nvim/my-snippets" })
 
 -- setcolorscheme actual (after all colorscheme plugins have been loaded)
-vim.cmd.colorscheme("lackluster-hack")
+vim.cmd.colorscheme("lackluster-mint")
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
