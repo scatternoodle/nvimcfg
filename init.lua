@@ -883,7 +883,7 @@ require("lazy").setup({
 require("luasnip.loaders.from_vscode").lazy_load({ paths = "~/.config/nvim/my-snippets" })
 
 -- setcolorscheme actual (after all colorscheme plugins have been loaded)
-vim.cmd.colorscheme("lackluster-mint")
+vim.cmd.colorscheme("gruvbox")
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
