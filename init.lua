@@ -519,7 +519,7 @@ require("lazy").setup({
 			local servers = {
 				-- clangd = {},
 				gopls = {},
-				-- pyright = {},
+				pyright = {},
 				-- rust_analyzer = {},
 				-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 				--
@@ -550,6 +550,12 @@ require("lazy").setup({
 						},
 					},
 				},
+
+				tailwindcss = {},
+
+				intelephense = {},
+
+				dockerls = {},
 			}
 
 			-- Ensure the servers and tools above are installed
@@ -883,7 +889,7 @@ require("lazy").setup({
 require("luasnip.loaders.from_vscode").lazy_load({ paths = "~/.config/nvim/my-snippets" })
 
 -- setcolorscheme actual (after all colorscheme plugins have been loaded)
-vim.cmd.colorscheme("gruvbox")
+vim.cmd.colorscheme("lackluster")
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
